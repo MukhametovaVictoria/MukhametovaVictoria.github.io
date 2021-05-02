@@ -1,0 +1,1048 @@
+//Наши стили
+.opn-reg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.opn-bold {
+	font-family:'Open Sans', sans-serif;
+	font-weight: 600;
+}
+@base-black: #706b73;
+@base-red: #fc7254;
+@white: #fff;
+@base-text: #626262;
+@bg-grey: #f5f5f5;
+@bg-tomi: #4eb2f7;
+@bg-koimona: #c049f8;
+@bg-koire: #817eff;
+@bg-lara: #f74770;
+@bg-services-list: #fbfbfb;
+@yellow: #ffef3b;
+@gray: #adadad;
+@bg-footer: #f7f7f7;
+
+//Основное содержание
+body {
+	font-size: 14px;
+	.opn-reg;
+	color: @base-text;
+} //Задаем станадр по умолчанию
+
+input, button, textarea {
+	&:focus {
+outline: none;
+    } //Убираем цветную видимость окон формы при выделении
+}
+section {
+	padding-top: 10%;
+	padding-bottom: 10%;
+} //Отступы в секции
+
+.section-header{
+	margin-bottom: 7%;
+	h2 {
+		font-size: 50px;
+		.opn-bold;
+		span {
+			color: @base-red;
+		}
+	}
+	p {
+		font-size: 16px;
+
+	}
+} //Задали стиль заголовка второго раздела
+
+/*Начинаем оформлять первый раздел*/
+header {
+	background: @bg-grey /* url(../img/main-bg.png) */ no-repeat center center;
+	background-size: cover;
+	min-height: 700px;
+	height: 100vh;
+} //Задали стиль первого раздела в общем
+
+.main { //Задаем стиль всем составляющим первого раздела
+	&-head {
+		margin-top: 3%;
+	}
+	&-logo-border {
+		text-align: center;
+		width: 155px;
+		height: 55px;
+		border: 3px solid @base-black;
+		line-height: 49px;
+		p {
+			.opn-bold;
+			font-size: 36px;
+			color: @base-black;
+			span {
+				color: lighten(@base-red, 5%);
+			}
+		}
+	}
+	&-nav-bar {
+		width: 55px;
+		position: relative;
+		float: right;
+		height: 55px;
+	}
+		&-text {
+			margin-top: 4%;
+			text-align: center;
+			h1 {
+				font-size: 50px;
+				.opn-bold;
+				span {
+					color: @base-red;
+				}
+			}
+			p {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+
+		&-form {
+			margin-top: 7%;
+			padding: 35px;
+			background-color: @white;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			-ms-border-radius: 2px;
+			-o-border-radius: 2px;
+			border-radius: 2px;
+			-webkit-box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+			box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+			&-header {
+				text-align: center;
+				font-size: 20px;
+				.opn-bold;
+				span {
+					color: @base-red;
+				}
+			}
+			&-btn {
+				background-color: @base-red;
+				border: none;
+				padding: 15px 35px;
+				color: @white;
+				display: block;
+				margin: 0 auto;
+				margin-top: 30px;
+				font-size: 16px;
+				-webkit-border-radius: 50px;
+				-moz-border-radius: 50px;
+				-ms-border-radius: 50px;
+				-o-border-radius: 50px;
+				border-radius: 50px;
+
+					span {
+					font-size: 22px;
+						}
+				&:hover {
+					box-shadow: 0px 11px 20px 0px rgba(20,20,21,0.08);
+						}
+				
+				
+			}
+			input, textarea {
+				width: 100%;
+				border: none;
+				border-bottom: 1px solid @base-black;
+				margin-top: 30px;
+				font-size: 15px;
+			}
+		}	
+}
+
+.line { //Создаем три линнии для всплывающего меню
+	-webkit-border-radius: 5px; //Параметры основной линии
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	display: block;
+	width: 30px;
+	height: 4px;
+	background-color: @base-black;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    --webkit-transform: translateY(-4px);//Приподнимем от центра
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-transform: transform 0.2s;
+    -ms-transform: transform 0.2s;
+    -o-transform: transform 0.2s;
+    transform: transform 0.2s;
+    &:before, &:after { //Две линии, одна сверху, другая снизу основной линии
+    	-webkit-transition: all 0.2s;
+    	-o-transition: all 0.2s;
+    	transition: all 0.2s;
+    	background-color: @base-black;
+    	display: inline-block;
+    	content: '';
+    	width: 30px;
+    	height: 4px;
+    	position: absolute;
+    	right: 0;
+	    top: 50%;
+	    -webkit-border-radius: 5px; //Закругление линий
+	    -moz-border-radius: 5px;
+	    -ms-border-radius: 5px;
+	    -o-border-radius: 5px;
+	    border-radius: 5px;
+    }
+    &:before { //Поднятие вверх (от центра блока)
+    	--webkit-transform: translateY(-8px);
+	    -ms-transform: translateY(-8px);
+	    -o-transform: translateY(-8px);
+	    transform: translateY(-8px);
+    }
+    &:after { //Опускание вниз (от цетра блока)
+    	--webkit-transform: translateY(4px);
+	    -ms-transform: translateY(4px);
+	    -o-transform: translateY(4px);
+	    transform: translateY(4px);
+    }
+}
+/* .main-nav-bar:hover {
+	.line{ 
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
+		height: 0;
+
+		&:before {
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+		&:after {
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		
+		}
+	}
+} */
+
+
+	
+/*Начинаем второй раздел*/
+.process {
+	&-box { //Начинаем описывать наши колонки. Общий стиль
+
+		color: @white;
+		padding: 25px;
+		padding-top: 35px;
+		text-align: center;
+		i.fa {
+			font-size: 50px;
+		}
+		h4 {
+			margin-top: 25px;
+			.opn-bold;
+			font-size: 20px;
+		}
+		p {
+			font-size: 16px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		&:hover {
+			box-shadow: 0px 0px 35px 0px rgba(20, 20, 21, 0.21);
+		}
+	}
+	&-btn { //Опишем кнопку
+		position: absolute; //Нам нужно ее сместить вниз от блока
+		left: 50%; //Отодвигаем кнопку на 50% от левого края блока
+		margin-left: -40%; //Возвращаем левее на 40%
+		bottom: -30px; //Опускаем ниже
+		border: none;
+		color: @base-black;
+		width: 80%;
+		-webkit-border-radius: 50px; //Закругляем края
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		background-color: @white;
+		font-size: 16px;
+		a {
+					display: block;
+					width: 100%;
+					height: 100% ;
+					outline: none;
+					text-decoration: none;
+					color: @base-black;
+					padding: 15px;
+					
+				}
+		&:hover {
+			box-shadow: 0px 6px 14px 0px rgba(20,20,21,0.09);
+			
+		}
+	}
+}
+	.btn-plus {//Нарисуем плюсик внутри кнопки
+		vertical-align: middle;//Горизонтальная линия
+		margin-right: 5px;
+		width: 16px;
+		height: 2px;
+		background-color: @base-black;
+		display: inline-block;
+		&:before { //Вертикальная линия
+			display: inline-block;
+			content: ' ';
+			width: 16px;
+			height: 2px;
+			background-color: @base-black;
+			position: absolute;
+			-webkit-transform: rotate(90deg) translateY(8px);//Повернем на 90 градусов и опустим
+			-ms-transform: rotate(90deg) translateY(8px);
+			-o-transform: rotate(90deg) translateY(8px);
+			transform: rotate(90deg) translateY(8px);
+		}
+	}
+.box {//Настроим каждую колонку
+	&-tomi {
+		background-color: @bg-tomi;
+	       }
+	&-koimona {
+		background-color: @bg-koimona;
+	       }
+	&-koire {
+		background-color: @bg-koire;
+	       }
+	&-lara {
+		background-color: @bg-lara;
+	       }
+    }
+	i.fa-camera-retro { //Последнюю иконку повернем влево на 15 градусов
+		-webkit-transform: rotate(-15deg);
+		-ms-transform: rotate(-15deg);
+		-o-transform: rotate(-15deg);
+		transform: rotate(-15deg);
+	}
+
+	.works-box {
+		height: 360px;
+		position: relative;
+		img {
+			width: 100%;
+		}
+
+	}
+	.signature {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.8);
+		color: @white;
+		text-align: center;
+		display: -webkit-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		-webkit-align-items: center;
+		-webkit-transition: all 0.2s;
+		-o-transition: all 0.2s;
+		transition: all 0.2s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.sign {
+		p{
+			.opn-bold;
+			font-size: 22px;
+
+		}
+		button {
+			border: none;
+			padding: 15px 35px;
+			-webkit-border-radius: 50px;
+			-moz-border-radius: 50px;
+			-ms-border-radius: 50px;
+			-o-border-radius: 50px;
+			border-radius: 50px;
+			background-color: @base-red;
+		}
+	}
+	.works-row {
+		margin-top: 3%;
+	}
+
+
+//Четвертый блок
+
+
+.services {
+	&-list {
+		list-style: none; //Нет круглишков в списке
+		text-align: center;
+		&-item{
+			display: inline-block;
+			margin: 5px auto;
+			width: 100px;
+			height: 100px;
+			text-align: right; //Выравниваем картинку по центру
+			background-color: @bg-services-list;
+		}
+	}
+	&-info {
+			h4 {
+				font-size: 30px;
+				}
+				p {
+					font-size: 16px;
+				}
+				img {
+					float: right;
+				}
+			}
+	&-line {
+			width: 60px;
+			height: 4px;
+			background-color: @base-red;
+			display: inline-block;
+			margin-bottom: 10px;
+			margin-top: 10px;
+
+			}
+	&-btn {//Опишем кнопку
+		margin-top: 50px;
+		border: none;
+		border: 1px solid lighten(@base-black, 50%);
+		color: @base-black;
+		padding: 15px 55px;
+		-webkit-border-radius: 50px; //Закругляем края
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		background-color: @white;
+		font-size: 16px;
+		box-shadow: 0px 6px 14px 0px rgba(20,20,21,0.09);
+
+	}
+}
+
+.feedback {
+	&-box {
+		margin-left: 15px;
+		margin-right: 15px;
+		padding: 10px;
+		p {
+			font-size: 17px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding-left: 25px;
+			padding-right: 25px;
+			span {
+				.opn-bold;
+			}
+		}
+		i.fa-star {
+			color: @yellow;
+		}
+	}
+	&-img {
+		margin-bottom: -64px;
+	}
+	&-shadow {
+		padding: 10px;
+		padding-top: 64px;
+		box-shadow: 0px 0px 27px 0px rgba(20, 20, 21, 0.09);
+	}
+	&-slider-arrows {
+		position: absolute;
+		text-align: center;
+		font-size: 17px;
+		z-index: 9; //для того, чтобы слайдер не перекрывал кнопку пролистывания
+		top: 50%;
+		height: 50px;
+		width: 50px;
+		-webkit-transform: translateY(-9px);
+		-ms-transform: translateY(-9px);
+		-o-transform: translateY(-9px);
+		transform: translateY(-9px);
+		padding: 16px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		background-color: @white;
+		box-shadow: 0px 3px 14px 0px rgba(20, 20, 21, 0.28);
+		&:hover {
+			background-color: @base-red;
+			color: @white;
+			cursor: pointer;
+		}
+	}
+}
+.slick-active {
+	outline: none;
+}
+.arrow-right {
+	right: 0;
+	padding-left: 20px;
+}
+.arrow-left {
+	left: 0;
+	padding-left: 15px;
+}
+.slick-dots li button:before {
+  width: 21px;
+  height: 7px;
+  color: transparent;
+  background-color: @gray;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+.slick-dots li.slick-active button:before {
+	color: transparent;
+	background-color: @base-red;
+}
+.slick-dots {
+	bottom: -50px;
+}
+footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: @bg-footer;
+}
+.footer {
+	&-btn {
+		background-color: @white;
+		color: @base-black;
+		font-size: 16px;
+		border: none;
+		padding: 12px 45px;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
+	}
+}
+
+svg {
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Modal Window
+
+-------------------------------- */
+.cd-modal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.6s;
+  -moz-transition: visibility 0s 0.6s;
+  transition: visibility 0s 0.6s;
+}
+.cd-modal svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cd-modal svg > path {
+  fill: #1f4c74;
+}
+.cd-modal .modal-close {
+  /* 'X' icon */
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 5%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3) url(../img/cd-icon-close.svg) no-repeat center center;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  /* Force hardware acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+.no-touch .cd-modal .modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cd-modal.modal-is-visible {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  -moz-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+.cd-modal.modal-is-visible .modal-close {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.cd-modal-content {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 3em 5% 4em;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, -moz-transform 0.3s 0s;
+  transition: opacity 0.3s 0s, transform 0.3s 0s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-modal-content p {
+  color: #f2f2f2;
+  line-height: 1.6;
+  margin: 2em 0;
+}
+.modal-is-visible .cd-modal-content {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  -moz-transition: opacity 0.3s 0.3s, -moz-transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
+}
+@media only screen and (min-width: 768px) {
+  .cd-modal-content {
+    padding: 3em 10% 4em;
+  }
+  .cd-modal-content p {
+    font-size: 2.4rem;
+  }
+}
+
+/* -------------------------------- 
+
+ Cover Layer - hide main content when modal is fired
+
+-------------------------------- */
+.cd-cover-layer {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0.3s, visibility 0s 0.6s;
+  -moz-transition: opacity 0.3s 0.3s, visibility 0s 0.6s;
+  transition: opacity 0.3s 0.3s, visibility 0s 0.6s;
+}
+.cd-cover-layer.modal-is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+
+	background-color: red;
+	-webkit-animation-name: move;
+	-o-animation-name: move;
+	animation-name: move;
+	animation-duration: 2s;
+	animation-timing-function: linear; //Изменение скорости движения
+	animation-delay: 5s; //Ожидание перед движением 
+	animation-iteration-count: 5; //количество раз
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+	.main {
+		&-text {
+			h1 {
+				font-size: 28px;
+			}
+		}
+	}
+	.section-header {
+		h2 {
+			font-size: 22px;
+		}
+
+	}
+	.process-box {
+		margin-top: 75px;
+	}
+	.works-box {
+		height: 100%;
+	}
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+	.process-box {
+		margin-top: 75px;
+
+	}
+	.works-box {
+		height: 100%;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.process-box {
+		margin-top: 75px;
+	}
+	.works-box {
+		height: 220px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.works-box {
+		height: 294px;
+	}
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+	
+}
+@media (min-width: 1601px) {
+	
+}
+
+.overlay-nav {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,.8);
+	ul {
+		padding-top: 10%;
+		line-height: 2.5;
+		text-align: center;
+		list-style: none;
+		li a {
+			-webkit-transition: all 0.2s;
+			-o-transition: all 0.2s;
+			transition: all 0.2s;
+			&:hover {
+				text-decoration: none;
+				color: @base-red;
+			}
+			color: #fff;
+			font-size: 36px;
+			.opn-bold;
+
+		}
+	}
+}
+.close-nav {
+	position: fixed;
+	font-size: 50px;
+	top: 5%;
+	right: 5%;
+	color: #fff;
+	&:hover {
+		cursor: pointer;
+	}
+}
+//parallax-bg
+.parallax-window {
+	min-height: 400px;
+	background: transparent;
+}
+
+//parallax pictures
+a{
+	text-decoration:none;
+	color:white;
+}
+h2{
+	font-family:"Voltaire";
+	text-transform:uppercase;
+	margin:0;
+}
+#scene{
+	background-color: @base-red;
+	position:relative;
+	overflow:hidden;
+	width:100%;
+}
+.layer{
+	pointer-events: none;
+}
+.col {
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 25%;
+	pointer-events: all;
+	overflow:initial;
+	margin:0 0 30px;
+}
+.col-1 {
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 600px;
+	pointer-events: all;
+	overflow:initial;
+	margin:0 0 30px;
+}
+.col-2 {
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 50%;
+	pointer-events: all;
+	overflow:initial;
+	margin:0 0 30px;
+}
+.layer.main{
+	width:100%;
+	position:absolute;
+	z-index:1;
+	padding:20px;
+}
+.col a{
+	display:block;
+	margin:15px;
+	overflow:hidden;
+	box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.37);
+}
+.col-1 a{
+	display:block;
+	margin:15px;
+	overflow:hidden;
+	box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.37);
+}
+.col-2 a{
+	display:block;
+	margin:15px;
+	overflow:hidden;
+	box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.37);
+}
+.col {
+	a .hover {
+			position: absolute;
+			top: 15px;
+			right:15px;
+			bottom:-15px;
+			left: 15px;
+			z-index: 1;
+			color: white;
+			background: -webkit-linear-gradient(bottom left, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			background: -o-linear-gradient(bottom left, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			background: linear-gradient(to top right, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78000000', endColorstr='#00000000',GradientType=1 );
+	}
+	
+}
+.col-1 a .hover{
+			position: absolute;
+			top: 15px;
+			right:15px;
+			bottom:-15px;
+			left: 15px;
+			z-index: 1;
+			color: white;
+			background: -webkit-linear-gradient(bottom left, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			background: -o-linear-gradient(bottom left, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			background: linear-gradient(to top right, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78000000', endColorstr='#00000000',GradientType=1 );
+	}
+	 .col-2 a .hover {
+			position: absolute;
+			top: 15px;
+			right:15px;
+			bottom:-15px;
+			left: 15px;
+			z-index: 1;
+			color: white;
+			background: -webkit-linear-gradient(bottom left, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			background: -o-linear-gradient(bottom left, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			background: linear-gradient(to top right, rgba(0,0,0,0.47) 0%, rgba(0,0,0,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78000000', endColorstr='#00000000',GradientType=1 );
+	}
+.col {
+	a .hover:after, &-1 a .hover:after, &-2 a .hover:after {
+	content:'';
+	position:absolut;
+	top:0;
+	left:0;
+	z-index:1;
+	width:100%;
+	height:100%;
+	display:block;
+	background: rgb(235, 116, 152);
+	opacity:0;
+	transition:0.35s ease;
+}
+}
+.col-1 a .hover:after {
+	content:'';
+	position:absolut;
+	top:0;
+	left:0;
+	z-index:1;
+	width:100%;
+	height:100%;
+	display:block;
+	background: rgb(235, 116, 152);
+	opacity:0;
+	transition:0.35s ease;
+}
+.col-2 a .hover:after {
+	content:'';
+	position:absolut;
+	top:0;
+	left:0;
+	z-index:1;
+	width:100%;
+	height:100%;
+	display:block;
+	background: rgb(235, 116, 152);
+	opacity:0;
+	transition:0.35s ease;
+}
+
+
+.col {
+a .hover:hover:after{
+	opacity:0.85;
+	transition:0.35s ease;
+}
+}
+.col-1 a .hover:hover:after{
+	opacity:0.85;
+	transition:0.35s ease;
+}
+.col-2 a .hover:hover:after
+{
+	opacity:0.85;
+	transition:0.35s ease;
+}
+
+
+.align-bottom {
+	position: absolute;
+	width: 100%;
+	bottom: 0%;
+	z-index: 2;
+	padding: 15px 20px;
+}
+.bg-img{
+	padding:0px;
+	width:100%;
+	height: 100%;
+	top:0;
+	left:0;
+	background-size:cover;
+	background-position:50% 50%;
+}
+
+@media only screen and (max-width:1200px){
+	.layer .col {
+		width:50%;
+	}
+	.layer .col-1{
+		width:50%;
+	}
+	.layer .col-2{
+		width:50%;
+	}
+}
+@media only screen and (max-width:650px){
+	.layer .col {
+		width:50%;
+	}
+	.layer .col-1{
+		width:50%;
+	}
+	.layer .col-2{
+		width:50%;
+	}
+	
+}
+//video on the first page
+.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+  
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Homework</title>
+    <script src="js/less.min.js"></script>
+    <link rel="stylesheet" href="css/style.less">
+
+    <!-- Bootstrap CSS -->
+    
+    <style>
+        html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,.h1 .small,.h2 .small,.h3 .small,.h4 .small,.h5 .small,.h6 .small{font-weight:400;line-height:1;color:#777}h1,.h1,h2,.h2,h3,.h3{margin-top:20px;margin-bottom:10px}h1 small,.h1 small,h2 small,.h2 small,h3 small,.h3 small,h1 .small,.h1 .small,h2 .small,.h2 .small,h3 .small,.h3 .small{font-size:65%}h4,.h4,h5,.h5,h6,.h6{margin-top:10px;margin-bottom:10px}h4 small,.h4 small,h5 small,.h5 small,h6 small,.h6 small,h4 .small,.h4 .small,h5 .small,.h5 .small,h6 .small,.h6 .small{font-size:75%}h1,.h1{font-size:36px}h2,.h2{font-size:30px}h3,.h3{font-size:24px}h4,.h4{font-size:18px}h5,.h5{font-size:14px}h6,.h6{font-size:12px}p{margin:0 0 10px}.lead{margin-bottom:20px;font-size:16px;font-weight:300;line-height:1.4}@media (min-width:768px){.lead{font-size:21px}}small,.small{font-size:85%}mark,.mark{padding:.2em;background-color:#fcf8e3}.text-left{text-align:left}.text-right{text-align:right}.text-center{text-align:center}.text-justify{text-align:justify}.text-nowrap{white-space:nowrap}.text-lowercase{text-transform:lowercase}.text-uppercase{text-transform:uppercase}.text-capitalize{text-transform:capitalize}.text-muted{color:#777}.text-primary{color:#337ab7}a.text-primary:hover,a.text-primary:focus{color:#286090}.text-success{color:#3c763d}a.text-success:hover,a.text-success:focus{color:#2b542c}.text-info{color:#31708f}a.text-info:hover,a.text-info:focus{color:#245269}.text-warning{color:#8a6d3b}a.text-warning:hover,a.text-warning:focus{color:#66512c}.text-danger{color:#a94442}a.text-danger:hover,a.text-danger:focus{color:#843534}.bg-primary{color:#fff;background-color:#337ab7}a.bg-primary:hover,a.bg-primary:focus{background-color:#286090}.bg-success{background-color:#dff0d8}a.bg-success:hover,a.bg-success:focus{background-color:#c1e2b3}.bg-info{background-color:#d9edf7}a.bg-info:hover,a.bg-info:focus{background-color:#afd9ee}.bg-warning{background-color:#fcf8e3}a.bg-warning:hover,a.bg-warning:focus{background-color:#f7ecb5}.bg-danger{background-color:#f2dede}a.bg-danger:hover,a.bg-danger:focus{background-color:#e4b9b9}.page-header{padding-bottom:9px;margin:40px 0 20px;border-bottom:1px solid #eee}ul,ol{margin-top:0;margin-bottom:10px}ul ul,ol ul,ul ol,ol ol{margin-bottom:0}.list-unstyled{padding-left:0;list-style:none}.list-inline{padding-left:0;list-style:none;margin-left:-5px}.list-inline>li{display:inline-block;padding-right:5px;padding-left:5px}dl{margin-top:0;margin-bottom:20px}dt,dd{line-height:1.42857143}dt{font-weight:700}dd{margin-left:0}@media (min-width:768px){.dl-horizontal dt{float:left;width:160px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dl-horizontal dd{margin-left:180px}}abbr[title],abbr[data-original-title]{cursor:help}.initialism{font-size:90%;text-transform:uppercase}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child,blockquote ul:last-child,blockquote ol:last-child{margin-bottom:0}blockquote footer,blockquote small,blockquote .small{display:block;font-size:80%;line-height:1.42857143;color:#777}blockquote footer:before,blockquote small:before,blockquote .small:before{content:"\2014 \00A0"}.blockquote-reverse,blockquote.pull-right{padding-right:15px;padding-left:0;text-align:right;border-right:5px solid #eee;border-left:0}.blockquote-reverse footer:before,blockquote.pull-right footer:before,.blockquote-reverse small:before,blockquote.pull-right small:before,.blockquote-reverse .small:before,blockquote.pull-right .small:before{content:""}.blockquote-reverse footer:after,blockquote.pull-right footer:after,.blockquote-reverse small:after,blockquote.pull-right small:after,.blockquote-reverse .small:after,blockquote.pull-right .small:after{content:"\00A0 \2014"}address{margin-bottom:20px;font-style:normal;line-height:1.42857143}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{margin-right:-15px;margin-left:-15px}.row-no-gutters{margin-right:0;margin-left:0}.row-no-gutters [class*="col-"]{padding-right:0;padding-left:0}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.fade{opacity:0;-webkit-transition:opacity .15s linear;-o-transition:opacity .15s linear;transition:opacity .15s linear}.fade.in{opacity:1}.collapse{display:none}.collapse.in{display:block}tr.collapse.in{display:table-row}tbody.collapse.in{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;-webkit-transition-property:height, visibility;-o-transition-property:height, visibility;transition-property:height, visibility;-webkit-transition-duration:.35s;-o-transition-duration:.35s;transition-duration:.35s;-webkit-transition-timing-function:ease;-o-transition-timing-function:ease;transition-timing-function:ease}.close{float:right;font-size:21px;font-weight:bold;line-height:1;color:#000;text-shadow:0 1px 0 #fff;filter:alpha(opacity=20);opacity:.2}.close:hover,.close:focus{color:#000;text-decoration:none;cursor:pointer;filter:alpha(opacity=50);opacity:.5}button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-appearance:none;appearance:none}.modal-open{overflow:hidden}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transform:translate(0, -25%);-ms-transform:translate(0, -25%);-o-transform:translate(0, -25%);transform:translate(0, -25%);-webkit-transition:-webkit-transform 0.3s ease-out;-o-transition:-o-transform 0.3s ease-out;transition:transform 0.3s ease-out}.modal.in .modal-dialog{-webkit-transform:translate(0, 0);-ms-transform:translate(0, 0);-o-transform:translate(0, 0);transform:translate(0, 0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,0.2);border-radius:6px;-webkit-box-shadow:0 3px 9px rgba(0,0,0,0.5);box-shadow:0 3px 9px rgba(0,0,0,0.5);outline:0}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0}.modal-backdrop.in{filter:alpha(opacity=50);opacity:.5}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.42857143}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}.modal-footer .btn+.btn{margin-bottom:0;margin-left:5px}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}@media (min-width:768px){.modal-dialog{width:600px;margin:30px auto}.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,0.5);box-shadow:0 5px 15px rgba(0,0,0,0.5)}.modal-sm{width:300px}}@media (min-width:992px){.modal-lg{width:900px}}.clearfix:before,.clearfix:after,.dl-horizontal dd:before,.dl-horizontal dd:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after,.modal-header:before,.modal-header:after,.modal-footer:before,.modal-footer:after{display:table;content:" "}.clearfix:after,.dl-horizontal dd:after,.container:after,.container-fluid:after,.row:after,.modal-header:after,.modal-footer:after{clear:both}.center-block{display:block;margin-right:auto;margin-left:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table !important}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table !important}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table !important}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table !important}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table !important}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+        .opn-reg{font-family:'Open Sans',sans-serif;font-weight:400}.opn-bold{font-family:'Open Sans',sans-serif;font-weight:600}body{font-size:14px;font-family:'Open Sans',sans-serif;font-weight:400;color:#626262}button:focus,input:focus,textarea:focus{outline:0}section{padding-top:10%;padding-bottom:10%}.section-header{margin-bottom:7%}.section-header h2{font-size:50px;font-family:'Open Sans',sans-serif;font-weight:600}.section-header h2 span{color:#fc7254}.section-header p{font-size:16px}header{background:center center no-repeat #f5f5f5;background-size:cover;min-height:700px;height:100vh}.main-head{margin-top:3%}.main-logo-border{text-align:center;width:155px;height:55px;border:3px solid #706b73;line-height:49px}.main-logo-border p{font-family:'Open Sans',sans-serif;font-weight:600;font-size:36px;color:#706b73}.main-logo-border p span{color:#fc876d}.main-nav-bar{width:55px;position:relative;float:right;height:55px}.main-text{margin-top:4%;text-align:center}.main-text h1{font-size:50px;font-family:'Open Sans',sans-serif;font-weight:600}.main-text h1 span{color:#fc7254}.main-text p{padding-left:15px;padding-right:15px}.main-form{margin-top:7%;padding:35px;background-color:#fff;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;border-radius:2px;-webkit-box-shadow:0 0 57px 0 rgba(20,20,21,.2);box-shadow:0 0 57px 0 rgba(20,20,21,.2)}.main-form-header{text-align:center;font-size:20px;font-family:'Open Sans',sans-serif;font-weight:600}.main-form-header span{color:#fc7254}.main-form-btn{background-color:#fc7254;border:none;padding:15px 35px;color:#fff;display:block;margin:30px auto 0;font-size:16px;-webkit-border-radius:50px;-moz-border-radius:50px;-ms-border-radius:50px;-o-border-radius:50px;border-radius:50px}.main-form-btn span{font-size:22px}.main-form-btn:hover{box-shadow:0 11px 20px 0 rgba(20,20,21,.08)}.main-form input,.main-form textarea{width:100%;border:none;border-bottom:1px solid #706b73;margin-top:30px;font-size:15px}.line{-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;display:block;width:30px;height:4px;background-color:#706b73;position:absolute;right:0;top:50%;--webkit-transform:translateY(-4px);-ms-transform:translateY(-4px);transform:translateY(-4px);-webkit-transform:transform .2s;-ms-transform:transform .2s;-o-transform:transform .2s;transform:transform .2s}.line:after,.line:before{-webkit-transition:all .2s;-o-transition:all .2s;transition:all .2s;background-color:#706b73;display:inline-block;content:'';width:30px;height:4px;position:absolute;right:0;top:50%;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px}.line:before{--webkit-transform:translateY(-8px);-ms-transform:translateY(-8px);-o-transform:translateY(-8px);transform:translateY(-8px)}.line:after{--webkit-transform:translateY(4px);-ms-transform:translateY(4px);-o-transform:translateY(4px);transform:translateY(4px)}
+
+    </style>
+    
+    
+  </head>
+  <body>
+    <!-- Первый раздел -->
+    <header id="main" class="wow fadeIn">
+        <div class="video-container">
+  
+          <video autoplay loop="true" width="1280" height="720">
+            <source type="video/mp4" src="video/Forrest Beach Ocean.mp4">
+            <source type="video/webm" src="video/Forrest Beach Ocean.webm">
+            <source type="video/jpg" src="video/Forrest Beach Ocean.jpg">
+          </video>
+
+        </div>
+
+    	<div class="container">
+            <!-- Шапка -->
+    		<div class="row main-head">
+    			<div class="col-lg-6 col-xs-6 main-logo">
+    				<div class="main-logo-border">
+    					<p><span class="color-logo">S</span>mart</p>
+    				</div>
+    			</div>
+    			<div class="col-lg-6 col-xs-6 main-nav">
+    				<a class="main-nav-bar" href="#">
+    					<span class="line"></span>
+    				</a>
+    			</div>
+    		</div>
+            <!-- Центральная надпись -->
+            <div class="row main-text">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1><span>Smart</span> Agency Landing Page</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet suscipit expedita quisquam totam quibusdam dolor repellat? Temporibus unde illo similique et, voluptatibus nobis ipsa repellendus , assumenda eum ipsum!</p>
+                </div>
+            </div>
+            <!-- Форма -->
+            <div class="row wow fadeInDown" data-wow-delay="1s">
+                <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2">
+                    <div class="main-form">
+                        <p class="main-form-header"><span>Send</span> A Message</p>
+                        <form id="main-form">
+                            <!-- <input type="hidden" name="whatever" value="Главная форма"> -->
+                            <input id="userName" name="name" type="text" placeholder="Your Name">
+                            <input id="phone" name="phone" type="tel" placeholder="Your Phone">
+                            <textarea placeholder="Your Message" rows="3"></textarea>
+                            <button id="submit-form" class="main-form-btn" type="submit">Send Message <span class="sign">&rarr;</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </header>
+
+    <!-- Второй раздел -->
+
+    <section id="process">
+        <div class="container wow fadeIn">
+
+            <!-- Заголовок -->
+
+            <div class="row">
+                <div class="col-xs-12 section-header text-center">
+                    <h2><span>Working </span>Process</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sint voluptas officiis aliquam ea.</p>
+                </div>
+            </div><!-- /row -->
+
+            <!-- 4 колонки с иконками -->
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 wow flipInX" data-wow-delay="0s"> <!-- Колонка 1 -->
+                    <div class="process-box box-tomi">
+                        <i class="fa fa-magnet"></i>
+                        <h4>
+                            Koc Koi Tomi
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="process-btn"><a href="#0" id="modal-trigger"  data-type="cd-modal-trigger"><span class="btn-plus"></span>Know More</a></button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 wow flipInX" data-wow-delay="0.3s"> <!-- Колонка 2 -->
+                    <div class="process-box box-koimona">
+                        <i class="fa fa-bug"></i>
+                        <h4>
+                            Koimona Set
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="process-btn"><a href="#0" id="modal-trigger" data-type="cd-modal-trigger"><span class="btn-plus"></span>Know More</a></button>
+
+                    </div></div>
+                <div class="col-md-3 col-sm-6 col-xs-12 wow flipInX" data-wow-delay="0.6s"> <!-- Колонка 3 -->
+                    <div class="process-box box-koire">
+                        <i class="fa fa-cogs"></i>
+                        <h4>
+                            Setting Koire
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="process-btn"><a href="#0" id="modal-trigger" data-type="cd-modal-trigger"><span class="btn-plus"></span>Know More</a></button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 wow flipInX" data-wow-delay="0.9s"> <!-- Колонка 4 -->
+                    <div class="process-box box-lara">
+                        <i class="fa fa-camera-retro"></i>
+                        <h4>
+                            Ko Image Lara
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="process-btn"><a href="#0" id="modal-trigger" data-type="cd-modal-trigger"><span class="btn-plus"></span>Know More</a></button>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /container -->
+    </section>
+
+    <!-- Третий блок -->
+
+    <section id="works">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-xs-12 section-header text-center">
+                    <h2><span>Featured </span>Works</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam explicabo porro voluptate.</p>
+                </div>
+            </div>
+            <div class="row works-row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/1.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #1</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/2.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #2</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/3.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #3</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /row -->
+            <div class="row works-row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/4.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #4</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/5.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #5</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/6.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #6</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /row -->
+            <div class="row works-row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/7.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #7</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/8.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #8</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="works-box">
+                        <img src="img/works/9.jpg" alt="Описание картинки">
+                        <div class="signature">
+                            <div class="sign">
+                                <p>Work #9</p>
+                            <button>Visit Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /row -->
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-lg-12 section-header text-center">
+                    <h2><span>Services</span> We Provide</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <ul role="tablist" class=" services-list">
+                        <li role="presentation" class="services-list-item"><a href="#app" aria-controls="app" role="tab" data-toggle="tab"><img src="img/services/1.png" alt="1"></a></li>
+                        <li role="presentation" class="services-list-item"><a href="#global" aria-controls="global" role="tab" data-toggle="tab" ><img src="img/services/2.png" alt="2"></a></li>
+                        <li role="presentation" class="services-list-item"><a href="#web" aria-controls="web" role="tab" data-toggle="tab" ><img src="img/services/3.png" alt="3"></a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-lg-10">
+                    <div class="tab-content services-info">
+                        <div role="tabpanel" class="row tab-pane fade in active " id="app">
+                            <div class="col-lg-8">
+                                <h4>
+                                Modern App Design
+                                </h4>
+                                <span class="services-line"></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ratione fugiat doloribus molestias eveniet, delectus quibusdam dicta tempora assumenda, alias minus vitae nulla unde, similique obcaecati nihil facilis ut ea! <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe aliquid maiores fugit quam non doloremque! </p>
+                                <button class="services-btn"><span class="btn-plus"></span> Know More</button>
+                            </div>
+                            <div class="col-lg-4"><img class="img-responsive" src="img/services/watch.png" alt="Часы"></div>
+                        </div>
+
+                        <div role="tabpanel" class="row tab-pane fade" id="global">
+                            <div class="col-lg-8">
+                                <h4>
+                                Modern Global Design
+                                </h4>
+                                <span class="services-line"></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ratione fugiat doloribus molestias eveniet, delectus quibusdam dicta tempora assumenda, alias minus vitae nulla unde, similique obcaecati nihil facilis ut ea! <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe aliquid maiores fugit quam non doloremque! </p>
+                                <button class="services-btn"><span class="btn-plus"></span> Know More</button>
+                            </div>
+                            <div class="col-lg-4"><img class="img-responsive" src="img/services/watch.png" alt="Часы"></div>
+                        </div>
+
+                        <div role="tabpanel" class="row tab-pane fade" id="web">
+                            <div class="col-lg-8">
+                                <h4>
+                                Modern Web Design
+                                </h4>
+                                <span class="services-line"></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ratione fugiat doloribus molestias eveniet, delectus quibusdam dicta tempora assumenda, alias minus vitae nulla unde, similique obcaecati nihil facilis ut ea! <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe aliquid maiores fugit quam non doloremque! </p>
+                                <button class="services-btn"><span class="btn-plus"></span> Know More</button>
+                            </div>
+                            <div class="col-lg-4"><img class="img-responsive" src="img/services/watch.png" alt="Часы"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="FAQ">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-lg-12 section-header text-center">
+                    <h2><span>Frequently</span> Asked Questions</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veritatis, dicta.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Collapsible Group Item #1
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Collapsible Group Item #2
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Collapsible Group Item #3
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- Вставка Аккордеона -->
+                </div> <!-- Закончились колонки -->
+            </div> <!-- /row -->
+        </div>
+    </section>
+
+    <!-- parallax-pictures -->
+            
+     <section id="scene" data-pointer-events="true" data-x-origin="0.5" data-y-origin="0.5" data-scalar-y="150.0" data-scalar-x="100.0" data-friction-x="0.05" data-friction-y="0.05">
+     <div class="layer main" data-depth="0.5">
+        <div class="col-1">
+            <a href="#">
+                <div class="hover">
+                    <div class="pad align-bottom">
+                        <h2>Поймай меня</h2>
+                    </div>
+                </div>
+                <div class="bg-img" style="background-image:url(img/parallax/layer1.png);"></div>
+            </a>
+        </div>
+    </div>
+    <div class="layer main" data-depth="1.0">
+    <div class="col">
+            <a href="#">
+                <div class="hover">
+                    <div class="pad align-bottom">
+                        <h2>Меня поймай</h2>
+                    </div>
+                </div>
+                <div class="bg-img" style="background-image:url(img/parallax/layer2.png);"></div>
+            </a>
+        </div>
+        </div>
+        <div class="layer main" data-depth="1.5">
+        <div class="col-2">
+            <a href="#">
+                <div class="hover">
+                    <div class="pad align-bottom">
+                        <h2>Меня тоже поймай</h2>
+                    </div>
+                </div>
+                <div class="bg-img" style="background-image:url(img/parallax/layer3.png);"></div>
+            </a>
+        </div>
+        </div> 
+        
+    </section>
+
+    <!-- parallax-bg -->
+    <section data-parallax="scroll" data-image-src="img/parallax/bg.jpg" id="scroll" class="parallax-window">
+    </section>
+
+    <section id="feedback">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-lg-12 section-header text-center">
+                    <h2><span>Clients </span>Said</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam asperiores, repudiandae cupiditate?</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="feedback-slider">
+                        <div class="feedback-slider-item text-center">
+                            <div class="feedback-box">
+                                <img class="img-circle feedback-img center-block" src="img/feedback/1.jpg" alt="">
+                                <div class="feedback-shadow">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dolorem, similique. Dicta inventore ut nisi aspernatur accusantium, voluptates, earum, distinctio velit laboriosam voluptate cumque! Iure, sapiente nisi ab enim mollitia?</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <p><span>Kita Say, </span>HK Director</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-slider-item text-center">
+                            <div class="feedback-box">
+                                <img class="img-circle feedback-img center-block" src="img/feedback/2.jpg" alt="">
+                                <div class="feedback-shadow">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dolorem, similique. Dicta inventore ut nisi aspernatur accusantium, voluptates, earum, distinctio velit laboriosam voluptate cumque! Iure, sapiente nisi ab enim mollitia?</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <p><span>Al Rayhan, </span>UX Director</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-slider-item text-center">
+                            <div class="feedback-box">
+                                <img class="img-circle feedback-img center-block" src="img/feedback/3.jpg" alt="">
+                                <div class="feedback-shadow">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dolorem, similique. Dicta inventore ut nisi aspernatur accusantium, voluptates, earum, distinctio velit laboriosam voluptate cumque! Iure, sapiente nisi ab enim mollitia?</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <p><span>Jackson Say, </span>PR Director</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-slider-item text-center">
+                            <div class="feedback-box">
+                                <img class="img-circle feedback-img center-block" src="img/feedback/4.jpg" alt="">
+                                <div class="feedback-shadow">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dolorem, similique. Dicta inventore ut nisi aspernatur accusantium, voluptates, earum, distinctio velit laboriosam voluptate cumque! Iure, sapiente nisi ab enim mollitia?</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <p><span>Alex Say, </span>MD Director</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-slider-item text-center">
+                            <div class="feedback-box">
+                                <img class="img-circle feedback-img center-block" src="img/feedback/5.jpg" alt="">
+                                <div class="feedback-shadow">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dolorem, similique. Dicta inventore ut nisi aspernatur accusantium, voluptates, earum, distinctio velit laboriosam voluptate cumque! Iure, sapiente nisi ab enim mollitia?</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <p><span>Piter Say, </span>HR Director</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-slider-item text-center">
+                            <div class="feedback-box">
+                                <img class="img-circle feedback-img center-block" src="img/feedback/6.jpg" alt="">
+                                <div class="feedback-shadow">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dolorem, similique. Dicta inventore ut nisi aspernatur accusantium, voluptates, earum, distinctio velit laboriosam voluptate cumque! Iure, sapiente nisi ab enim mollitia?</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <p><span>Tom Say, </span>TU Director</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center wow tada">
+                    <button data-toggle="modal" data-target="#modal-1" class="footer-btn">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+	
+
+
+
+    <div class="modal fade" id="modal-thanks" data-backdrop="true" data-keyboard="true" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Спасибо за заявку<span id="nameUser"></span></h4>
+          </div>
+          <div class="modal-body">
+            <p>За Вами уже выехали!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть проклятое окно</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay-nav">
+        <span class="close-nav">&times;</span>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Карта</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+
+    <div class="cd-modal" data-modal="modal-trigger">
+        <div class="cd-svg-bg" 
+        data-step1="M-59.9,540.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L864.8-41c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L-59.5,540.6 C-59.6,540.7-59.8,540.7-59.9,540.5z" 
+        data-step2="M33.8,690l-188.2-300.3c-0.1-0.1,0-0.3,0.1-0.3l925.4-579.8c0.1-0.1,0.3,0,0.3,0.1L959.6,110c0.1,0.1,0,0.3-0.1,0.3 L34.1,690.1C34,690.2,33.9,690.1,33.8,690z" 
+        data-step3="M-465.1,287.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L459.5-294c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-464.9,287.7-465,287.7-465.1,287.5z" 
+        data-step4="M-329.3,504.3l-272.5-435c-0.1-0.1,0-0.3,0.1-0.3l925.4-579.8c0.1-0.1,0.3,0,0.3,0.1l272.5,435c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-329,504.5-329.2,504.5-329.3,504.3z" 
+        data-step5="M341.1,797.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L1265.8,216c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L341.5,797.6 C341.4,797.7,341.2,797.7,341.1,797.5z" 
+        data-step6="M476.4,1013.4L205,580.3c-0.1-0.1,0-0.3,0.1-0.3L1130.5,0.2c0.1-0.1,0.3,0,0.3,0.1l271.4,433.1c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C476.6,1013.6,476.5,1013.5,476.4,1013.4z">
+            <svg height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 800 500">
+                <title>SVG Modal background</title>
+                <path id="cd-changing-path-1" d="M-59.9,540.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L864.8-41c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L-59.5,540.6 C-59.6,540.7-59.8,540.7-59.9,540.5z"/>
+                <path id="cd-changing-path-2" d="M-465.1,287.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L459.5-294c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-464.9,287.7-465,287.7-465.1,287.5z"/>
+                <path id="cd-changing-path-3" d="M341.1,797.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L1265.8,216c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L341.5,797.6 C341.4,797.7,341.2,797.7,341.1,797.5z"/>
+            </svg>
+        </div>
+    
+        <div class="cd-modal-content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio 
+            </p>
+    
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! 
+            </p>
+        </div> <!-- cd-modal-content
+         -->
+        <a href="#0" class="modal-close">Close</a>
+    </div> <!-- cd-modal -->
+    
+    <div class="cd-cover-layer"></div> <!-- .cd-cover-layer -->
+    
+    <!-- links -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/snap.svg-min.js"></script>
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script src="js/wow.min.js"></script>
+    
+	<script>
+		new WOW().init();
+	</script>
+    <script>
+        $(document).ready(function(){
+          $('.feedback-slider').slick({
+              infinite: true, /*Бесконечная прокрутка*/
+              slidesToShow: 2, /*Сколько слайдов видим*/
+              slidesToScroll: 2, /*Сколько слайдов перелистываем*/
+              arrows: true, /*Сделаем стрелочки*/
+              prevArrow: '<i class="fa feedback-slider-arrows arrow-left fa-chevron-left"></i>',
+              nextArrow: '<i class="fa feedback-slider-arrows arrow-right fa-chevron-right"></i>',
+              dots: true, /*Сделаем точки для пролистывания и показа кол-ва слайдов*/
+
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                
+                {
+                  breakpoint: 320,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+
+          });
+        });
+    
+    </script>
+
+<!--     <script> //Наша форма
+    $(document).ready(function() {
+
+$("#main-form-ajax").submit(function() {
+    $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        $('#modal-thanks').modal('show');
+        $("#main-form-ajax").trigger("reset");
+    });
+    return false;
+});
+
+});
+</script> -->
+    <script> //Наше выпадающее меню
+        $(document).ready(function() {
+            var $nav = $('a.main-nav-bar');
+            $nav.click(function() {
+                $('.overlay-nav').show('slow');
+            })
+            $('.close-nav').click(function() {
+                $('.overlay-nav').hide('slow');
+            })
+        })
+    </script>
+    <script src="js/jquery.maskedinput.min.js" type="text/JavaScript"></script>
+    <script>
+        jQuery(function($){
+            $("#phone").mask("+7 (999) 999-99-99");
+            });
+    </script>
+
+    <script>
+        $(document).ready(function() { 
+            $('#submit-form').click(function() {
+                if ($('input#userName').val() !== '') {
+                        $('span#nameUser').text(', '+ $('input#userName').val());
+                        $('#modal-thanks').modal('show');
+                }
+                /*else {
+                    alert('Вы не заполнили поле "Имя"');
+                }*/
+            })
+        })
+
+    </script> 
+
+    <script src="js/parallax.min.js"></script>
+    <script>
+    
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/2.1.3/parallax.min.js"></script>
+    <script>
+        var makeWinHeight = function(){
+    var vh = $(window).height();
+    var projects = vh/2;
+    $('#scene, .layer.main').height(vh);
+    $('#scene .col a, #scene .col').height(projects);
+    $('#scene .col-1 a, #scene .col-1').height(projects);
+    $('#scene .col-2 a, #scene .col-2').height(projects);
+    }
+    $(document).ready(function(){
+        makeWinHeight();
+
+    });
+    $(window).resize(function(){
+        makeWinHeight();
+    });
+
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+    </script>
+  </body>
+</html>
